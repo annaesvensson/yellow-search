@@ -12,7 +12,7 @@ The search is available on your website as `http://website/search/`. It searches
 
 ## How to customise a search
 
-If you don't want to search trough the entire website, you can use different filters to customise search results. The `author:` filter finds pages by a specific author. The `language:` filter finds pages in a specific language. The `tag:` filter finds pages with a specific tag. The `folder:` filter finds pages in a specific folder. Once you're logged in with your user account, you can search with the `status:` filter for [hidden pages](https://github.com/datenstrom/yellow-extensions/tree/master/source/core) and [draft pages](https://github.com/datenstrom/yellow-extensions/tree/master/source/draft).
+If you don't want to search trough the entire website, you can use different filters to customise search results. The `author:` filter finds pages by a specific author. The `language:` filter finds pages in a specific language. The `tag:` filter finds pages with a specific tag. The `folder:` filter finds pages in a specific folder. Once you're logged in with your user account, you can search with the `status:` filter for [hidden pages](https://github.com/annaesvensson/yellow-core) and [draft pages](https://github.com/annaesvensson/yellow-draft).
 
 ## Examples
 
@@ -82,7 +82,7 @@ The following files can be customised:
 
 ## Installation
 
-[Download extension](https://github.com/datenstrom/yellow-extensions/raw/master/downloads/search.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
+[Download extension](https://github.com/annaesvensson/yellow-search/archive/main.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
 
 ## Developer
 

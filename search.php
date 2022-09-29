@@ -1,5 +1,5 @@
 <?php
-// Search extension, https://github.com/datenstrom/yellow-extensions/tree/master/source/search
+// Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
     const VERSION = "0.8.23";
