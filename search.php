@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.8.23";
+    const VERSION = "0.8.24";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -18,7 +18,7 @@ class YellowSearch {
         $output = null;
         if ($name=="search" && ($type=="block" || $type=="inline")) {
             list($location) = $this->yellow->toolbox->getTextArguments($text);
-            if (empty($location)) $location = $this->yellow->system->get("searchLocation");
+            if (is_string_empty($location)) $location = $this->yellow->system->get("searchLocation");
             $output = "<div class=\"".htmlspecialchars($name)."\" role=\"search\">\n";
             $output .= "<form class=\"search-form\" action=\"".$this->yellow->page->base.$location."\" method=\"post\">\n";
             $output .= "<input class=\"form-control\" type=\"text\" name=\"query\" placeholder=\"".$this->yellow->language->getTextHtml("searchButton")."\" />\n";
@@ -34,11 +34,11 @@ class YellowSearch {
         if ($name=="search") {
             $query = trim($page->getRequest("query"));
             list($tokens, $filters) = $this->getSearchInformation($query, 10);
-            if (!empty($tokens) || !empty($filters)) {
+            if (!is_array_empty($tokens) || !is_array_empty($filters)) {
                 $pages = $this->yellow->content->clean();
                 $showInvisible = $this->yellow->getRequestHandler()=="edit" && isset($filters["status"]);
                 $pagesContent = $this->yellow->content->index($showInvisible, false);
-                if (!empty($filters)) {
+                if (!is_array_empty($filters)) {
                     if (isset($filters["tag"])) $pagesContent->filter("tag", $filters["tag"]);
                     if (isset($filters["author"])) $pagesContent->filter("author", $filters["author"]);
                     if (isset($filters["language"])) $pagesContent->filter("language", $filters["language"]);
@@ -81,14 +81,14 @@ class YellowSearch {
                     }
                 }
                 $pages->sort("modified", false)->sort("searchScore", false);
-                $text = empty($query) ? $this->yellow->language->getText("searchSpecialChanges") : $query;
+                $text = is_string_empty($query) ? $this->yellow->language->getText("searchSpecialChanges") : $query;
                 $this->yellow->page->set("titleHeader", $text." - ".$this->yellow->page->get("sitename"));
                 $this->yellow->page->set("titleContent", $this->yellow->page->get("title").": ".$text);
                 $this->yellow->page->set("title", $this->yellow->page->get("title").": ".$text);
                 $this->yellow->page->setPages("search", $pages);
                 $this->yellow->page->setLastModified($pages->getModified());
                 $this->yellow->page->setHeader("Cache-Control", "max-age=60");
-                $this->yellow->page->set("status", count($pages) ? "done" : "empty");
+                $this->yellow->page->set("status", is_array_empty($pages) ? "empty" : "done");
             } else {
                 if ($this->yellow->isCommandLine()) $this->yellow->page->error(500, "Static website not supported!");
                 $this->yellow->page->set("status", "none");
@@ -106,7 +106,7 @@ class YellowSearch {
         }
         foreach ($tokens as $key=>$value) {
             if (preg_match("/^(.*?):(.*)$/", $value, $matches)) {
-                if (!empty($matches[1]) && !strempty($matches[2]) && in_array($matches[1], $filtersSupported)) {
+                if (!is_string_empty($matches[1]) && !is_string_empty($matches[2]) && in_array($matches[1], $filtersSupported)) {
                     $filters[$matches[1]] = $matches[2];
                     unset($tokens[$key]);
                 }
@@ -119,7 +119,7 @@ class YellowSearch {
     // Return raw data for search results, extract the relevant page content
     public function getRawDataSearch($page, $tokens) {
         $output = $outputStart = "";
-        if (!empty($tokens)) {
+        if (!is_array_empty($tokens)) {
             $foundStart = $insideCode = false;
             foreach ($tokens as $token) {
                 if (stristr($page->get("title"), $token)) {
@@ -147,7 +147,7 @@ class YellowSearch {
                 }
             }
         }
-        if (empty($output)) $output = $page->getContent(true);
+        if (is_string_empty($output)) $output = $page->getContent(true);
         return substrb($page->rawData, 0, $page->metaDataOffsetBytes).substrb($output, 0, 4096);
     }
 }
