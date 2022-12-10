@@ -6,6 +6,10 @@ Full-text search.
 
 <p align="center"><img src="search-screenshot.png?raw=true" alt="Screenshot"></p>
 
+## How to install an extension
+
+[Download ZIP file](https://github.com/annaesvensson/yellow-search/archive/main.zip) and copy it into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
+
 ## How to use a search
 
 The search is available on your website as `http://website/search/`. It searches trough content of the entire website, only visible pages are included. To show a search field on your website use a `[search]` shortcut.
@@ -79,10 +83,6 @@ The following settings can be configured in file `system/extensions/yellow-syste
 The following files can be customised:
 
 `system/layouts/search.html` = layout file for search  
-
-## Installation
-
-[Download extension](https://github.com/annaesvensson/yellow-search/archive/main.zip) and copy ZIP file into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
 
 ## Developer
 

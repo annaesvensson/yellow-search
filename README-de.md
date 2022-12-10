@@ -6,6 +6,10 @@ Volltext-Suche.
 
 <p align="center"><img src="search-screenshot.png?raw=true" alt="Bildschirmfoto"></p>
 
+## Wie man eine Erweiterung installiert
+
+[ZIP-Datei herunterladen](https://github.com/annaesvensson/yellow-search/archive/main.zip) und in dein `system/extensions`-Verzeichnis kopieren. [Weitere Informationen zu Erweiterungen](https://github.com/annaesvensson/yellow-update/tree/main/README-de.md).
+
 ## Wie man eine Suche benutzt
 
 Die Suche ist auf deiner Webseite vorhanden als `http://website/search/`. Sie durchsucht den Inhalt der gesamten Webseite, nur sichtbare Seiten sind enthalten. Um ein Suchfeld auf deiner Webseite anzuzeigen, benutze eine `[search]`-Abkürzung.
@@ -79,10 +83,6 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 Die folgenden Dateien können angepasst werden:
 
 `system/layouts/search.html` = Layoutdatei für Suche  
-
-## Installation
-
-[Erweiterung herunterladen](https://github.com/annaesvensson/yellow-search/archive/main.zip) und die ZIP-Datei in dein `system/extensions`-Verzeichnis kopieren. [Weitere Informationen zu Erweiterungen](https://github.com/annaesvensson/yellow-update/tree/main/README-de.md).
 
 ## Entwickler
 
