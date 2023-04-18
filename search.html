@@ -8,17 +8,18 @@
 <input type="hidden" name="clean-url" />
 </form>
 <?php if ($this->yellow->page->get("status")=="done"): ?>
-<?php foreach ($this->yellow->page->getPages("search")->paginate($this->yellow->system->get("searchPaginationLimit")) as $page): ?>
+<?php $pages = $this->yellow->page->getPages("search")->paginate($this->yellow->system->get("searchPaginationLimit")) ?>
+<?php foreach ($pages as $page): ?>
 <div class="entry">
 <div class="entry-title"><h2><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("title") ?></a></h2></div>
 <div class="entry-content"><?php echo htmlspecialchars($this->yellow->toolbox->createTextDescription($page->getContent(), $this->yellow->system->get("searchPageLength"))) ?></div>
 <div class="entry-location"><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getUrl() ?></a></div>
 </div>
 <?php endforeach ?>
+<?php $this->yellow->layout("pagination", $pages) ?>
 <?php elseif ($this->yellow->page->get("status")=="empty"): ?>
 <p><?php echo $this->yellow->language->getTextHtml("searchResults".ucfirst($this->yellow->page->get("status"))) ?><p>
 <?php endif ?>
-<?php $this->yellow->layout("pagination", $this->yellow->page->getPages("search")) ?>
 </div>
 </div>
 <?php $this->yellow->layout("footer") ?>
