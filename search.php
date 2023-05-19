@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.8.25";
+    const VERSION = "0.8.26";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -36,7 +36,7 @@ class YellowSearch {
             list($tokens, $filters) = $this->getSearchInformation($query, 10);
             if (!is_array_empty($tokens) || !is_array_empty($filters)) {
                 $pages = $this->yellow->content->clean();
-                $showInvisible = $this->yellow->getRequestHandler()=="edit" && isset($filters["status"]);
+                $showInvisible = $this->yellow->lookup->getRequestHandler()=="edit" && isset($filters["status"]);
                 $pagesContent = $this->yellow->content->index($showInvisible, false);
                 if (!is_array_empty($filters)) {
                     if (isset($filters["tag"])) $pagesContent->filter("tag", $filters["tag"]);
@@ -52,7 +52,7 @@ class YellowSearch {
                     $searchScore = 0;
                     $searchTokens = array();
                     foreach ($tokens as $token) {
-                        $score = substr_count(strtoloweru($pageContent->getContent(true)), strtoloweru($token));
+                        $score = substr_count(strtoloweru($pageContent->getContentRaw()), strtoloweru($token));
                         if ($score) {
                             $searchScore += $score;
                             $searchTokens[$token] = true;
@@ -127,7 +127,7 @@ class YellowSearch {
                     break;
                 }
             }
-            foreach ($this->yellow->toolbox->getTextLines($page->getContent(true)) as $line) {
+            foreach ($this->yellow->toolbox->getTextLines($page->getContentRaw()) as $line) {
                 if (!$foundStart) {
                     if (preg_match("/^`{3,}/", $line)) $insideCode ^= true;
                     if (!$insideCode && ($line=="\n" || preg_match("/^(\!)?\s*(\d*\.|\*|\-|\|)\s+/", $line))) {
@@ -147,7 +147,7 @@ class YellowSearch {
                 }
             }
         }
-        if (is_string_empty($output)) $output = $page->getContent(true);
+        if (is_string_empty($output)) $output = $page->getContentRaw();
         return substrb($page->rawData, 0, $page->metaDataOffsetBytes).substrb($output, 0, 4096);
     }
 }
