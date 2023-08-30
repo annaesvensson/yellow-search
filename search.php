@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.8.26";
+    const VERSION = "0.8.27";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -75,7 +75,7 @@ class YellowSearch {
                         }
                     }
                     if (count($tokens)==count($searchTokens)) {
-                        $pageContent->rawData = $this->getRawDataSearch($pageContent, $tokens);
+                        $pageContent->setPage("searchResult", $this->getPageSearchResult($pageContent, $tokens));
                         $pageContent->set("searchScore", $searchScore);
                         $pages->append($pageContent);
                     }
@@ -116,8 +116,18 @@ class YellowSearch {
         return array($tokens, $filters);
     }
     
-    // Return raw data for search results, extract the relevant page content
-    public function getRawDataSearch($page, $tokens) {
+    // Return page with search result, extract the relevant content
+    public function getPageSearchResult($page, $tokens) {
+        $searchResult = new YellowPage($this->yellow);
+        $searchResult->setRequestInformation($page->scheme, $page->address, $page->base,
+            $page->location, $page->fileName, false);
+        $searchResult->parseMeta($this->getRawDataSearchResult($page, $tokens));
+        $searchResult->statusCode = 200;
+        return $searchResult;
+    }
+    
+    // Return raw data for search result, extract the relevant content
+    public function getRawDataSearchResult($page, $tokens) {
         $output = $outputStart = "";
         if (!is_array_empty($tokens)) {
             $foundStart = $insideCode = false;
@@ -148,6 +158,6 @@ class YellowSearch {
             }
         }
         if (is_string_empty($output)) $output = $page->getContentRaw();
-        return substrb($page->rawData, 0, $page->metaDataOffsetBytes).substrb($output, 0, 4096);
+        return substrb($page->rawData, 0, $page->metaDataOffsetBytes).$output;
     }
 }
