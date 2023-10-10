@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Search 0.8.27
+# Search 0.8.28
 
 Full-text search.
 
@@ -39,6 +39,7 @@ Searching a website, additional filters for logged in users:
     status:draft
     status:unlisted
     status:shared
+    status:all
 
 Showing a search field:
 
