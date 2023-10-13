@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.8.28";
+    const VERSION = "0.8.29";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -44,7 +44,7 @@ class YellowSearch {
                     if (isset($filters["tag"]) && $filters["tag"]!="all") $pagesContent->filter("tag", $filters["tag"]);
                     if (isset($filters["author"]) && $filters["author"]!="all") $pagesContent->filter("author", $filters["author"]);
                     if (isset($filters["language"]) && $filters["language"]!="all") $pagesContent->filter("language", $filters["language"]);
-                    if (isset($filters["folder"]) && $filters["folder"]!="all") $pagesContent->match("#/$filters[folder]/#i");
+                    if (isset($filters["folder"]) && $filters["folder"]!="all") $pagesContent->match("#/[\d\-\_\.]+$filters[folder]#i", false);
                     if (isset($filters["status"]) && $filters["status"]!="all") $pagesContent->filter("status", $filters["status"]);
                 }
                 foreach ($pagesContent as $pageContent) {
