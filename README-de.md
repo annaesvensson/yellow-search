@@ -14,6 +14,8 @@ Volltext-Suche.
 
 Die Suche ist auf deiner Webseite vorhanden als `http://website/search/`. Sie durchsucht den Inhalt der gesamten Webseite, nur sichtbare Seiten sind enthalten. Um ein Suchfeld auf deiner Webseite anzuzeigen, benutze eine `[search]`-Abkürzung.
 
+Falls du nicht willst dass eine Seite in den Suchergebnissen sichtbar ist, kannst du `Status: unlisted` in den [Seiteneinstellungen](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md#einstellungen-seite) ganz oben auf einer Seite festlegen.
+
 ## Wie man eine Suche anpasst
 
 Falls du nicht die gesamte Webseite durchsuchen willst, kannst du unterschiedliche Filter benutzen um Suchergebnisse anzupassen. Der Filter `author:` findet Seiten von einem bestimmten Autor. Der Filter `language:` findet Seiten in einer bestimmten Sprache. Der Filter `tag:` findet Seiten mit einem bestimmten Tag. Der Filter `folder:` findet Seiten in einem bestimmten Verzeichnis. Sobald du mit deinem Benutzerkonto angemeldet bist, kannst du mit dem Filter `status:` nach [versteckten Seiten](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) und [Entwurfsseiten](https://github.com/annaesvensson/yellow-draft/tree/main/README-de.md) suchen.
@@ -72,6 +74,14 @@ Inhaltsdatei mit Link zur Suche:
     in culpa qui officia deserunt mollit anim id est laborum.
     
     [Alle Seiten durchsuchen](/search/).
+
+Inhaltsdatei mit ungelisteter Seite:
+
+    ---
+    Title: Ungelistete Seite
+    Status: unlisted
+    ---
+    Diese Seite ist in den Suchergebnissen nicht sichtbar.
 
 ## Einstellungen
 

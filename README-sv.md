@@ -14,6 +14,8 @@ Heltekstsökning.
 
 Sökningen är tillgänglig på din webbplats som `http://website/search/`. Den söker igenom innehållet på hela webbplatsen, endast synliga sidor ingår. För att visa ett sökfält på din webbplats, lägg till en `[search]` förkortning.
 
+Om du inte vill att en sida ska synas i sökresultaten, ställ in `Status: unlisted` i [sidinställningar](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md#inställningar-page) högst upp på en sida.
+
 ## Hur man anpassar en sökning
 
 Om du inte vill söka igenom hela webbplatsen, kan du använda olika filter för att anpassa sökresultaten. Filtret `author:` hittar sidor av en specifik författare. Filtret `language:` hittar sidor på ett specifikt språk. Filtret `tag:` hittar sidor med en specifik tagg. Filtret `folder:` hittar sidor i en specifik mapp. När du är inloggad med ditt användarkonto kan du söka med filtret `status:` efter [dolda sidor](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md) och [draftsidor](https://github.com/annaesvensson/yellow-draft/tree/main/README-sv.md).
@@ -72,6 +74,14 @@ Innehållsfil med länk till sökningen:
     in culpa qui officia deserunt mollit anim id est laborum.
 
     [Sök på alla sidor](/search/).
+
+Innehållsfil med olistad sida:
+
+    ---
+    Title: Olistad sida
+    Status: unlisted
+    ---
+    Den här sidan är inte synlig i sökresultaten.
 
 ## Inställningar
 
