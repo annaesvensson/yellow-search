@@ -86,7 +86,7 @@ Innehållsfil med länk till sökningen, senaste ändringarna på webbplatsen:
     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
     in culpa qui officia deserunt mollit anim id est laborum.
     
-    [Se senaste ändringarna](/wiki/special:changes/)
+    [Se senaste ändringarna](/search/special:changes/).
 
 Innehållsfil med olistad sida:
 
