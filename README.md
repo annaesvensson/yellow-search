@@ -75,6 +75,18 @@ Content file with link to search:
 
     [Search all pages](/search/).
 
+Content file with link to search, recent changes on the website:
+
+    ---
+    Title: Example page
+    ---
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+    labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+    in culpa qui officia deserunt mollit anim id est laborum.
+
+    [See recent changes](/search/special:changes/).
 
 Content file with unlisted page:
 
