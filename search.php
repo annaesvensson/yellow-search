@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.8.29";
+    const VERSION = "0.8.30";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -13,8 +13,8 @@ class YellowSearch {
         $this->yellow->system->setDefault("searchPageLength", "360");
     }
     
-    // Handle page content of shortcut
-    public function onParseContentShortcut($page, $name, $text, $type) {
+    // Handle page content element
+    public function onParseContentElement($page, $name, $text, $attributes, $type) {
         $output = null;
         if ($name=="search" && ($type=="block" || $type=="inline")) {
             list($location) = $this->yellow->toolbox->getTextArguments($text);
