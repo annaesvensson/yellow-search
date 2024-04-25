@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.9.1";
+    const VERSION = "0.9.2";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -38,7 +38,7 @@ class YellowSearch {
                 $pages = $this->yellow->content->clean();
                 $showInvisible = $this->yellow->lookup->getRequestHandler()=="edit" && isset($filters["status"]);
                 $showShared = $showInvisible && ($filters["status"]=="shared" || $filters["status"]=="all");
-                $pagesContent = $this->yellow->content->index($showInvisible, false);
+                $pagesContent = $this->yellow->content->index($showInvisible);
                 if ($showShared) $pagesContent->merge($this->yellow->content->getShared($page->location));
                 if (!is_array_empty($filters)) {
                     if (isset($filters["tag"]) && $filters["tag"]!="all") $pagesContent->filter("tag", $filters["tag"]);
