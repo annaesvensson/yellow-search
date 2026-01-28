@@ -1,8 +1,6 @@
-<p align="right"><a href="readme-de.md">Deutsch</a> &nbsp; <a href="readme.md">English</a> &nbsp; <a href="readme-sv.md">Svenska</a></p>
-
 # Search 0.9.2
 
-Full-text search.
+Full-text search. Developed by Anna Svensson.
 
 <p align="center"><img src="screenshot.png" alt="Screenshot"></p>
 
@@ -108,6 +106,4 @@ The following files can be customised:
 
 `system/layouts/search.html` = layout file for search  
 
-## Developer
-
-Anna Svensson. [Get help](https://datenstrom.se/yellow/help/).
+Do you have questions? [Get help](https://datenstrom.se/yellow/help/).
