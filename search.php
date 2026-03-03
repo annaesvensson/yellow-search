@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.9.2";
+    const VERSION = "0.9.3";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -89,7 +89,7 @@ class YellowSearch {
                 $this->yellow->page->setHeader("Cache-Control", "max-age=60");
                 $this->yellow->page->set("status", is_array_empty($pages) ? "empty" : "done");
             } else {
-                if ($this->yellow->lookup->isCommandLine()) $this->yellow->page->error(500, "Static website not supported!");
+                if ($this->yellow->lookup->isCommandLine()) $this->yellow->page->error(500, "Can't generate static page!");
                 $this->yellow->page->set("status", "none");
             }
         }

@@ -1,4 +1,4 @@
-# Search 0.9.2
+# Search 0.9.3
 
 Volltext-Suche. Entwickelt von Anna Svensson.
 
