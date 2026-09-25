@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "0.9.3";
+    const VERSION = "1.0.1";
     public $yellow;         // access to API
     
     // Handle initialisation
