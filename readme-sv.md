@@ -10,13 +10,15 @@ Heltekstsökning. Utvecklad av Anna Svensson.
 
 ## Hur man använder en sökning
 
-Sökningen är tillgänglig på din webbplats som `http://website/search/`. Den söker igenom innehållet på hela webbplatsen, endast synliga sidor ingår. För att visa ett sökfält på din webbplats, lägg till en `[search]` förkortning.
+Sökningen är tillgänglig på din webbplats som `http://website/search/`. Ange vad du söker efter. Sökfunktionen genomsöker innehållet på din webbplats och visar de bästa resultaten högst upp. Den söker igenom innehållet på hela webbplatsen, endast synliga sidor ingår.
 
 Om du inte vill att en sida ska synas, ställ in `Status: unlisted` i [sidinställningar](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md#inställningar-page) högst upp på en sida.
 
 ## Hur man anpassar en sökning
 
 Om du inte vill söka igenom hela webbplatsen, kan du använda olika filter för att anpassa sökresultaten. Filtret `author:` hittar sidor av en specifik författare. Filtret `language:` hittar sidor på ett specifikt språk. Filtret `tag:` hittar sidor med en specifik tagg. Filtret `folder:` hittar sidor i en specifik mapp. När du är inloggad med ditt användarkonto kan du söka med filtret `status:` efter [dolda sidor](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md) och [draftsidor](https://github.com/annaesvensson/yellow-draft/tree/main/readme-sv.md).
+
+Du kan använda `[search]`-förkortningen för att visa ett sökfält.
 
 ## Exempel
 
@@ -40,25 +42,6 @@ Söka på en webbplats, ytterligare filter för inloggade användare:
     status:unlisted
     status:shared
     status:all
-
-Visa ett sökfält:
-
-    [search]
-    [search /search/]
-    [search /sv/search/]
-
-Innehållsfil med sökfält:
-
-    ---
-    Title: Exempelsida
-    ---
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-    labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-    in culpa qui officia deserunt mollit anim id est laborum.
-
-    [search]
 
 Innehållsfil med länk till sökningen:
 
@@ -85,6 +68,19 @@ Innehållsfil med länk till sökningen, senaste ändringarna på webbplatsen:
     in culpa qui officia deserunt mollit anim id est laborum.
     
     [Se senaste ändringarna](/search/special:changes/).
+
+Innehållsfil med sök-förkortning:
+
+    ---
+    Title: Exempelsida
+    ---
+    Detta är en exempelsida med sök-förkortning.
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+    
+    [search].
 
 Innehållsfil med olistad sida:
 

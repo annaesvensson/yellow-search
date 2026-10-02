@@ -10,13 +10,15 @@ Volltext-Suche. Entwickelt von Anna Svensson.
 
 ## Wie man eine Suche benutzt
 
-Die Suche ist auf deiner Webseite vorhanden als `http://website/search/`. Sie durchsucht den Inhalt der gesamten Webseite, nur sichtbare Seiten sind enthalten. Um ein Suchfeld auf deiner Webseite anzuzeigen, benutze eine `[search]`-Abkürzung.
+Die Suche ist auf deiner Webseite vorhanden als `http://website/search/`. Geb ein wonach du suchst. Die Suchfunktion durchsucht den Inhalte deiner Website und zeigt die besten Ergebnisse ganz oben an. Dabei wird der gesamte Inhalt der Webseite durchsucht, nur sichtbare Seiten sind enthalten.
 
 Falls du nicht willst dass eine Seite sichtbar ist, kannst du `Status: unlisted` in den [Seiteneinstellungen](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md#einstellungen-seite) ganz oben auf einer Seite festlegen.
 
 ## Wie man eine Suche anpasst
 
 Falls du nicht die gesamte Webseite durchsuchen willst, kannst du unterschiedliche Filter benutzen um Suchergebnisse anzupassen. Der Filter `author:` findet Seiten von einem bestimmten Autor. Der Filter `language:` findet Seiten in einer bestimmten Sprache. Der Filter `tag:` findet Seiten mit einem bestimmten Tag. Der Filter `folder:` findet Seiten in einem bestimmten Verzeichnis. Sobald du mit deinem Benutzerkonto angemeldet bist, kannst du mit dem Filter `status:` nach [versteckten Seiten](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md) und [Entwurfsseiten](https://github.com/annaesvensson/yellow-draft/tree/main/readme-de.md) suchen.
+
+Du kannst die `[search]`-Abkürzungen verwenden, um ein Suchfeld anzuzeigen.
 
 ## Beispiele
 
@@ -40,25 +42,6 @@ Webseite durchsuchen, zusätzliche Filter für angemeldete Benutzer:
     status:unlisted
     status:shared
     status:all
-
-Suchfeld anzeigen:
-
-    [search]
-    [search /search/]
-    [search /de/search/]
-
-Inhaltsdatei mit Suchfeld:
-
-    ---
-    Title: Beispielseite
-    ---
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-    labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-    in culpa qui officia deserunt mollit anim id est laborum.
-
-    [search]
 
 Inhaltsdatei mit Link zur Suche:
 
@@ -85,6 +68,19 @@ Inhaltsdatei mit Link zur Suche, letzte Änderungen auf der Webseite:
     in culpa qui officia deserunt mollit anim id est laborum.
     
     [Siehe letzte Änderungen](/search/special:changes/).
+
+Inhaltsdatei mit Such-Abkürzung:
+
+    ---
+    Title: Beispielseite
+    ---
+    Das ist eine Beispielseite mit Such-Abkürzung.
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+    [search]
 
 Inhaltsdatei mit ungelisteter Seite:
 

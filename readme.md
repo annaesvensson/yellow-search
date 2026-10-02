@@ -10,13 +10,15 @@ Full-text search. Developed by Anna Svensson.
 
 ## How to use a search
 
-The search is available on your website as `http://website/search/`. It searches trough content of the entire website, only visible pages are included. To show a search field on your website use a `[search]` shortcut.
+The search is available on your website as `http://website/search/`. Enter what you are looking for. The search feature checks what is stored on your website and shows the best results on top. It searches trough content of the entire website, only visible pages are included.
 
 If you don't want that a page is visible, set `Status: unlisted` in the [page settings](https://github.com/annaesvensson/yellow-core#settings-page) at the top of a page.
 
 ## How to customise a search
 
 If you don't want to search trough the entire website, you can use different filters to customise search results. The `author:` filter finds pages by a specific author. The `language:` filter finds pages in a specific language. The `tag:` filter finds pages with a specific tag. The `folder:` filter finds pages in a specific folder. Once you're logged in with your user account, you can search with the `status:` filter for [hidden pages](https://github.com/annaesvensson/yellow-core) and [draft pages](https://github.com/annaesvensson/yellow-draft).
+
+You can use the `[search]` shortcut to show a search field.
 
 ## Examples
 
@@ -40,25 +42,6 @@ Searching a website, additional filters for logged in users:
     status:unlisted
     status:shared
     status:all
-
-Showing a search field:
-
-    [search]
-    [search /search/]
-    [search /en/search/]
-
-Content file with search field:
-
-    ---
-    Title: Example page
-    ---
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-    labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-    in culpa qui officia deserunt mollit anim id est laborum.
-
-    [search]
 
 Content file with link to search:
 
@@ -85,6 +68,19 @@ Content file with link to search, recent changes on the website:
     in culpa qui officia deserunt mollit anim id est laborum.
 
     [See recent changes](/search/special:changes/).
+
+Content file with search shortcut:
+
+    ---
+    Title: Example page
+    ---
+    This is an example page with search shortcut.
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+    [search]
 
 Content file with unlisted page:
 
