@@ -10,7 +10,7 @@ Heltekstsökning. Utvecklad av Anna Svensson.
 
 ## Hur man använder en sökning
 
-Sökningen är tillgänglig på din webbplats som `http://website/search/`. Ange vad du söker efter. Sökfunktionen genomsöker innehållet på din webbplats och visar de bästa resultaten högst upp. Den söker igenom hela webbplatsen, endast synliga sidor ingår.
+Sökningen är tillgänglig på din webbplats som `http://website/search/`. Ange vad du söker efter. Sökfunktionen genomsöker innehållet på hela webbplatsen och visar de bästa resultaten högst upp. Endast synliga sidor visas i sökresultaten.
 
 Om du inte vill att en sida ska synas, ställ in `Status: unlisted` i [sidinställningar](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md#inställningar-page) högst upp på en sida.
 

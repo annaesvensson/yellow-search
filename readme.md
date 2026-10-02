@@ -10,13 +10,13 @@ Full-text search. Developed by Anna Svensson.
 
 ## How to use a search
 
-The search is available on your website as `http://website/search/`. Enter what you are looking for. The search feature search trough the content of your website and shows the best results at the top. It search trough the entire website, only visible pages are included.
+The search is available on your website as `http://website/search/`. Enter what you are looking for. The search feature searches through the content of the entire website and shows the best results at the top. Only visible pages are shown in search results.
 
 If you don't want that a page is visible, set `Status: unlisted` in the [page settings](https://github.com/annaesvensson/yellow-core#settings-page) at the top of a page.
 
 ## How to customise a search
 
-If you don't want to search trough the entire website, you can use different filters to customise search results. The `author:` filter finds pages by a specific author. The `language:` filter finds pages in a specific language. The `tag:` filter finds pages with a specific tag. The `folder:` filter finds pages in a specific folder. Once you're logged in with your user account, you can search with the `status:` filter for [hidden pages](https://github.com/annaesvensson/yellow-core) and [draft pages](https://github.com/annaesvensson/yellow-draft).
+If you don't want to search through the entire website, you can use different filters to customise search results. The `author:` filter finds pages by a specific author. The `language:` filter finds pages in a specific language. The `tag:` filter finds pages with a specific tag. The `folder:` filter finds pages in a specific folder. Once you're logged in with your user account, you can search with the `status:` filter for [hidden pages](https://github.com/annaesvensson/yellow-core) and [draft pages](https://github.com/annaesvensson/yellow-draft).
 
 You can use the `[search]` shortcut to show a search field.
 
