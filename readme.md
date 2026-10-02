@@ -10,7 +10,7 @@ Full-text search. Developed by Anna Svensson.
 
 ## How to use a search
 
-The search is available on your website as `http://website/search/`. Enter what you are looking for. The search feature checks what is stored on your website and shows the best results on top. It searches trough content of the entire website, only visible pages are included.
+The search is available on your website as `http://website/search/`. Enter what you are looking for. The search feature searches trough the content of your website and shows the best results at the top. It searches trough content of the entire website, only visible pages are included.
 
 If you don't want that a page is visible, set `Status: unlisted` in the [page settings](https://github.com/annaesvensson/yellow-core#settings-page) at the top of a page.
 
