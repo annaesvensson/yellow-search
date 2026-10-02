@@ -80,7 +80,7 @@ Innehållsfil med sök-förkortning:
     tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
     
-    [search].
+    [search]
 
 Innehållsfil med olistad sida:
 
