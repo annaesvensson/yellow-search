@@ -10,7 +10,7 @@ Heltekstsökning. Utvecklad av Anna Svensson.
 
 ## Hur man använder en sökning
 
-Sökningen är tillgänglig på din webbplats som `http://website/search/`. Ange vad du söker efter. Sökfunktionen genomsöker innehållet på hela webbplatsen och visar de bästa resultaten högst upp. Endast synliga sidor visas i sökresultaten.
+Sökningen är tillgänglig på din webbplats som `http://website/search/`. Du kan ange text och filter i sökfältet. Sökfunktionen genomsöker innehållet på hela webbplatsen och visar de bästa resultaten högst upp. Endast synliga sidor visas i sökresultaten.
 
 Om du inte vill att en sida ska synas, ställ in `Status: unlisted` i [sidinställningar](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md#inställningar-page) högst upp på en sida.
 
@@ -80,7 +80,7 @@ Innehållsfil med sök-förkortning:
     tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
     
-    [search]
+    [search /search/]
 
 Innehållsfil med olistad sida:
 

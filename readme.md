@@ -10,7 +10,7 @@ Full-text search. Developed by Anna Svensson.
 
 ## How to use a search
 
-The search is available on your website as `http://website/search/`. Enter what you are looking for. The search feature searches through the content of the entire website and shows the best results at the top. Only visible pages are shown in search results.
+The search is available on your website as `http://website/search/`. You can enter text and filters in the search field. The search feature searches through the content of the entire website and shows the best results at the top. Only visible pages are shown in search results.
 
 If you don't want that a page is visible, set `Status: unlisted` in the [page settings](https://github.com/annaesvensson/yellow-core#settings-page) at the top of a page.
 
@@ -80,7 +80,7 @@ Content file with search shortcut:
     tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 
-    [search]
+    [search /search/]
 
 Content file with unlisted page:
 
