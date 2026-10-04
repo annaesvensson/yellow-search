@@ -10,7 +10,7 @@ Volltext-Suche. Entwickelt von Anna Svensson.
 
 ## Wie man eine Suche benutzt
 
-Die Suche ist auf deiner Webseite vorhanden als `http://website/search/`. Du kannst Text und Filter im Suchfeld eingeben. Die Suche untersucht den Inhalt der gesamten Webseite und zeigt die besten Suchergebnisse an. Je häufiger Suchbegriffe auf einer Seite vorkommen, desto höher wird diese Seite in den Suchergebnissen platziert. Nur sichtbare Seiten werden in den Suchergebnissen angezeigt.
+Die Suche ist auf deiner Webseite vorhanden als `http://website/search/`. Du kannst Text und Filter eingeben. Die Suche untersucht den Inhalt der gesamten Webseite und zeigt die besten Suchergebnisse an. Je häufiger Suchbegriffe auf einer Seite vorkommen, desto höher wird diese Seite in den Suchergebnissen platziert. Nur sichtbare Seiten werden in den Suchergebnissen angezeigt.
 
 Falls du nicht willst dass eine Seite sichtbar ist, kannst du `Status: unlisted` in den [Seiteneinstellungen](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md#einstellungen-seite) ganz oben auf einer Seite festlegen.
 
