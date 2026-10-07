@@ -10,7 +10,7 @@ Heltekstsökning. Utvecklad av Anna Svensson.
 
 ## Hur man använder en sökning
 
-Sökningen är tillgänglig på din webbplats som `http://website/search/`. Du kan ange text och filter. Sökningen undersöker innehållet på hela webbplatsen och visar de bästa sökresultaten. Ju oftare sökord förekommer på en sida, desto högre placeras den sidan i sökresultaten. Endast synliga sidor visas i sökresultaten.
+Sökningen är tillgänglig på din webbplats som `http://website/search/`. Du kan ange text och filter. Sökningen undersöker innehållet av alla sidor. Ju oftare sökord förekommer på en sida, desto högre placeras den sidan i sökresultaten. Endast synliga sidor visas i sökresultaten.
 
 Om du inte vill att en sida ska synas, ställ in `Status: unlisted` i [sidinställningar](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md#inställningar-page) högst upp på en sida.
 
