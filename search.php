@@ -2,13 +2,12 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "1.0.1";
+    const VERSION = "1.0.2";
     public $yellow;         // access to API
     
     // Handle initialisation
     public function onLoad($yellow) {
         $this->yellow = $yellow;
-        $this->yellow->system->setDefault("searchLocation", "/search/");
         $this->yellow->system->setDefault("searchPaginationLimit", "5");
         $this->yellow->system->setDefault("searchPageLength", "360");
     }
@@ -18,7 +17,7 @@ class YellowSearch {
         $output = null;
         if ($name=="search" && ($type=="block" || $type=="inline")) {
             list($location) = $this->yellow->toolbox->getTextArguments($text);
-            if (is_string_empty($location)) $location = $this->yellow->system->get("searchLocation");
+            if (is_string_empty($location)) $location = $this->getSearchLocation();
             $output = "<div class=\"".htmlspecialchars($name)."\" role=\"search\">\n";
             $output .= "<form class=\"search-form\" action=\"".$this->yellow->page->base.$location."\" method=\"post\">\n";
             $output .= "<input class=\"form-control\" type=\"text\" name=\"query\" placeholder=\"".$this->yellow->language->getTextHtml("searchButton")."\" />\n";
@@ -113,6 +112,18 @@ class YellowSearch {
         }
         if ($tokensMax) $tokens = array_slice($tokens, 0, $tokensMax);
         return array($tokens, $filters);
+    }
+    
+    // Return search location, guess if not found
+    public function getSearchLocation() {
+        $location = "/search/";
+        foreach ($this->yellow->content->top(true, false) as $pageTop) {
+            if ($pageTop->get("layout")=="search") {
+                $location = $pageTop->location;
+                break;
+            }
+        }
+        return $location;
     }
     
     // Return page with search result, extract the relevant content

@@ -1,4 +1,4 @@
-# Search 1.0.1
+# Search 1.0.2
 
 Volltext-Suche. Entwickelt von Anna Svensson.
 
@@ -94,7 +94,6 @@ Inhaltsdatei mit ungelisteter Seite:
 
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
 
-`SearchLocation` = Ort der Suche  
 `SearchPaginationLimit` = Anzahl der Einträge pro Seite, 0 für unbegrenzt  
 `SearchPageLength` = maximale Seitenlänge die angezeigt wird  
 

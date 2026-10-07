@@ -1,4 +1,4 @@
-# Search 1.0.1
+# Search 1.0.2
 
 Heltekstsökning. Utvecklad av Anna Svensson.
 
@@ -94,7 +94,6 @@ Innehållsfil med olistad sida:
 
 Följande inställningar kan konfigureras i filen `system/extensions/yellow-system.ini`:
 
-`SearchLocation` = plats för sökningen  
 `SearchPaginationLimit` = antal inlägg att visa per sida, 0 för obegränsad  
 `SearchPageLength` = maximal sidlängd att visa  
 

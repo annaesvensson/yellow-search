@@ -1,4 +1,4 @@
-# Search 1.0.1
+# Search 1.0.2
 
 Full-text search. Developed by Anna Svensson.
 
@@ -94,7 +94,6 @@ Content file with unlisted page:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`SearchLocation` = search location  
 `SearchPaginationLimit` = number of entries to show per page, 0 for unlimited  
 `SearchPageLength` = maximum page length to show  
 
