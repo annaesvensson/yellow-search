@@ -18,7 +18,7 @@ If you don't want that a page is visible, set `Status: unlisted` in the [page se
 
 If you don't want to search through the entire website, you can use different filters to customise search results. The `author:` filter finds pages by a specific author. The `language:` filter finds pages in a specific language. The `tag:` filter finds pages with a specific tag. The `folder:` filter finds pages in a specific folder. Once you're logged in with your user account, you can search with the `status:` filter for [hidden pages](https://github.com/annaesvensson/yellow-core) and [draft pages](https://github.com/annaesvensson/yellow-draft).
 
-You can use the `[search]` shortcut to show a search field.
+You can customise the appearance of your website with HTML and CSS. The HTML for the search can be customised in file `system/layouts/search.html`, the CSS can be customised in the current theme. [Learn more about HTML and CSS](https://datenstrom.se/yellow/help/how-to-customise-html-and-css).
 
 ## Examples
 

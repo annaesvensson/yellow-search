@@ -18,7 +18,7 @@ Om du inte vill att en sida ska synas, ställ in `Status: unlisted` i [sidinstä
 
 Om du inte vill söka igenom hela webbplatsen, kan du använda olika filter för att anpassa sökresultaten. Filtret `author:` hittar sidor av en specifik författare. Filtret `language:` hittar sidor på ett specifikt språk. Filtret `tag:` hittar sidor med en specifik tagg. Filtret `folder:` hittar sidor i en specifik mapp. När du är inloggad med ditt användarkonto kan du söka med filtret `status:` efter [dolda sidor](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md) och [draftsidor](https://github.com/annaesvensson/yellow-draft/tree/main/readme-sv.md).
 
-Du kan använda `[search]`-förkortningen för att visa ett sökfält.
+Du kan anpassa utseendet på din webbplats med HTML och CSS. HTML för sökningen kan anpassas i filen `system/layouts/search.html`, CSS kan anpassas i det aktuella temat. [Läs mer om HTML och CSS](https://datenstrom.se/sv/yellow/help/how-to-customise-html-and-css).
 
 ## Exempel
 

@@ -18,7 +18,7 @@ Falls du nicht willst dass eine Seite sichtbar ist, kannst du `Status: unlisted`
 
 Falls du nicht die gesamte Webseite durchsuchen willst, kannst du unterschiedliche Filter benutzen um Suchergebnisse anzupassen. Der Filter `author:` findet Seiten von einem bestimmten Autor. Der Filter `language:` findet Seiten in einer bestimmten Sprache. Der Filter `tag:` findet Seiten mit einem bestimmten Tag. Der Filter `folder:` findet Seiten in einem bestimmten Verzeichnis. Sobald du mit deinem Benutzerkonto angemeldet bist, kannst du mit dem Filter `status:` nach [versteckten Seiten](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md) und [Entwurfsseiten](https://github.com/annaesvensson/yellow-draft/tree/main/readme-de.md) suchen.
 
-Du kannst die `[search]`-Abkürzungen verwenden, um ein Suchfeld anzuzeigen.
+Du kannst das Aussehen deiner Webseite mit HTML und CSS anpassen. Das HTML für die Suche kann man in der Datei `system/layouts/search.html` anpassen, das CSS kann man im aktuellen Theme anpassen. [Weitere Informationen zu HTML und CSS](https://datenstrom.se/de/yellow/help/how-to-customise-html-and-css). 
 
 ## Beispiele
 
