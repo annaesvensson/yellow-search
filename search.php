@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "1.0.2";
+    const VERSION = "1.0.3";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -19,7 +19,7 @@ class YellowSearch {
             list($location) = $this->yellow->toolbox->getTextArguments($text);
             if (is_string_empty($location)) $location = $this->getSearchLocation();
             $output = "<div class=\"".htmlspecialchars($name)."\" role=\"search\">\n";
-            $output .= "<form class=\"search-form\" action=\"".$this->yellow->page->base.$location."\" method=\"post\">\n";
+            $output .= "<form class=\"search-form\" action=\"".$page->base.$location."\" method=\"post\">\n";
             $output .= "<input class=\"form-control\" type=\"text\" name=\"query\" placeholder=\"".$this->yellow->language->getTextHtml("searchButton")."\" />\n";
             $output .= "<input type=\"hidden\" name=\"clean-url\" />\n";
             $output .= "</form>\n";
@@ -80,16 +80,16 @@ class YellowSearch {
                 }
                 $pages->sort("modified", false)->sort("searchScore", false);
                 $text = is_string_empty($query) ? $this->yellow->language->getText("searchSpecialChanges") : $query;
-                $this->yellow->page->set("titleHeader", $text." - ".$this->yellow->page->get("sitename"));
-                $this->yellow->page->set("titleContent", $this->yellow->page->get("title").": ".$text);
-                $this->yellow->page->set("title", $this->yellow->page->get("title").": ".$text);
-                $this->yellow->page->setPages("search", $pages);
-                $this->yellow->page->setLastModified($pages->getModified());
-                $this->yellow->page->setHeader("Cache-Control", "max-age=60");
-                $this->yellow->page->set("status", is_array_empty($pages) ? "empty" : "done");
+                $page->set("titleHeader", $text." - ".$page->get("sitename"));
+                $page->set("titleContent", $page->get("title").": ".$text);
+                $page->set("title", $page->get("title").": ".$text);
+                $page->setPages("search", $pages);
+                $page->setLastModified($pages->getModified());
+                $page->setHeader("Cache-Control", "max-age=60");
+                $page->set("status", is_array_empty($pages) ? "empty" : "done");
             } else {
-                if ($this->yellow->lookup->isCommandLine()) $this->yellow->page->error(500, "Can't generate static page!");
-                $this->yellow->page->set("status", "none");
+                if ($this->yellow->lookup->isCommandLine()) $page->error(500, "Can't generate static page!");
+                $page->set("status", "none");
             }
         }
     }
