@@ -1,4 +1,4 @@
-# Search 1.0.3
+# Search 1.0.4
 
 Heltekstsökning. Utvecklad av Anna Svensson.
 

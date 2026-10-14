@@ -2,7 +2,7 @@
 // Search extension, https://github.com/annaesvensson/yellow-search
 
 class YellowSearch {
-    const VERSION = "1.0.3";
+    const VERSION = "1.0.4";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -31,7 +31,7 @@ class YellowSearch {
     // Handle page layout
     public function onParsePageLayout($page, $name) {
         if ($name=="search") {
-            $query = trim($page->getRequest("query"));
+            $query = $this->yellow->lookup->normaliseInput($page->getRequest("query"));
             list($tokens, $filters) = $this->getSearchInformation($query, 10);
             if (!is_array_empty($tokens) || !is_array_empty($filters)) {
                 $pages = $this->yellow->content->clean();
